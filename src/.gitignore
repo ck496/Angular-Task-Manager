@@ -14,15 +14,19 @@ pubspec.lock
 !.devcontainer/recommended-devcontainer.json
 !.devcontainer/recommended-Dockerfile
 .settings/
-.vscode/launch.json
-.vscode/settings.json
-.vscode/tasks.json
 *.swo
 *.swp
 modules/.settings
 modules/.vscode
 .vimrc
 .nvimrc
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Don't check in secret files
 *secret.js
@@ -66,3 +70,23 @@ Training
 Blog
 About
 
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+Footer
+© 2022 GitHub, Inc.

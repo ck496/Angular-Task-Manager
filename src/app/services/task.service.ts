@@ -31,9 +31,16 @@ export class TaskService {
   updateTaskReminder(task: Task): Observable<Task>{
     //need to append task id at the end of ApiUrl to delete
     const url = `${this.apiUrl}/${task.id}`;
-    
-    //Sedding data so want to send headers with the content type
+
+    //Sending data so want to send headers with the content type
     return this.http.put<Task>(url, task, httpOptions)
+
+  }
+
+  addTask(task: Task): Observable<Task>{
+    // Jason-server configures task id for you
+    //Sending data so want to send headers with the content type
+    return this.http.post<Task>(this.apiUrl, task, httpOptions)
 
   }
 

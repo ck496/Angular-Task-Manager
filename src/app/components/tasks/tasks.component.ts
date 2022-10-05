@@ -33,7 +33,7 @@ export class TasksComponent implements OnInit {
      * Push the task we get back into the tasks[] so it can be updated on the ui for this instance.
      * Otherwise you have to refresh to see the new task on the UI
     * */
-    this.taskService.addTask(task).subscribe();
+    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
   }
 
 
